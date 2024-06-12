@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 
@@ -8,7 +9,7 @@ public class TimeUI : MonoBehaviour
     
     public void SetTime(float time)
     {
-        timeText.text = time.ToString("mm:ss");
+        timeText.text = TimeSpan.FromSeconds(time).ToString(@"mm\:ss");
     }
     
 }
